@@ -1,3 +1,8 @@
+front_wild_village:
+    resource: "@FrontWildVillageBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 user:
     resource: "@UserBundle/Controller/"
     type:     annotation
