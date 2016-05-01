@@ -1,0 +1,50 @@
+/*=============================*\
+		  MENU ACCUEIL
+\*=============================*/
+nav.navbar-default {
+	height: 70px;
+	background-color: #ECF0F1;
+	padding: 0 40px;
+	margin: 0;
+	border: none;
+	border-radius: 0;
+	border-bottom: solid #00B5B5 4px;
+	border-top: solid #60646D 1px;
+}
+nav > div.container-fluid {
+	height: 100%;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+div > div.navbar-header {
+	height: 100%;
+	width: auto;
+}
+div > div.navbar-header > a{
+	display: block;
+	margin: 8px 0 !important;
+}
+nav > div > div >.nav-logo {
+	padding: 0px;
+}
+ul.nav > li {
+	
+}
+nav > div > ul.nav,
+nav > div > ul.nav > li {
+	height: 100%;
+}
+nav > div > ul.nav > li > a {
+	display: inline-block;
+	height: 100%;
+	line-height: 70px;
+	padding: 0 30px;
+	color: #00B5B5 !important;
+	font-size: 1.2em;
+}
+nav > div > ul.nav > li > a:hover {
+	color: #ECF0F1 !important;
+	background-color: #00B5B5 !important;
+}
