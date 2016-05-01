@@ -1,0 +1,21 @@
+{
+  "name": "WildVillage",
+  "homepage": "https://github.com/topdeveloppement/WildVillage",
+  "description": "",
+  "main": "bower.json",
+  "authors": [
+    "topdeveloppement@gmail.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/vendors/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
