@@ -1,0 +1,19 @@
+/*=============================*\
+		     FOOTER
+\*=============================*/
+footer.container-footer {
+	position: absolute;
+	width:100%;
+	bottom: 0;
+	background-color: #ECF0F1;
+	border-top: solid #00B5B5 4px;
+}
+footer.container-footer div.container-fluid {
+	text-align: center;
+	padding-top: 14px;
+	padding-bottom: 10px;
+}
+footer.container-footer div.container-fluid .footer-copyright {
+	font-weight: bold;
+	letter-spacing: 0.1em;
+}

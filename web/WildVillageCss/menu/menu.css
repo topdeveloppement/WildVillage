@@ -44,6 +44,9 @@ nav > div > ul.nav > li > a {
 	color: #00B5B5 !important;
 	font-size: 1.2em;
 }
+nav > div > ul.nav > li > a span {
+	margin-right: 10px;
+}
 nav > div > ul.nav > li > a:hover {
 	color: #ECF0F1 !important;
 	background-color: #00B5B5 !important;
