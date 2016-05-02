@@ -1,6 +1,6 @@
 
-# WildVillage Socilal Network 
-============================== 
+# WildVillage Social Network 
+============================
 
 Projet Symfony 3 créée le 30 05 2016.
 
