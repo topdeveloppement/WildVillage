@@ -1,0 +1,17 @@
+{# PAGE DASHBOARD WILDER CODER #}
+{% extends 'base.html.twig' %}
+{% block menu %}{% include 'menu/index.html.twig' %}{% endblock %}
+{% block dashboard %}
+<div class="row marg-row">
+	<div class="col-lg-3">
+	{{ render(controller("UserBundle:Profile:AddProfile")) }}
+	</div>
+	<div class="col-lg-6">
+	
+	</div>
+	<div class="col-lg-3">
+		{# {% block message %}{% include 'message/index.html.twig' %}{% endblock %} #}
+	</div>
+</div>
+{% endblock %}    
+{% block footer %}{% include 'footer/index.html.twig' %}{% endblock %}

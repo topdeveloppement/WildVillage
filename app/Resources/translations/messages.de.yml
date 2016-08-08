@@ -1,0 +1,9 @@
+base:
+    title: Willkommen
+
+navbar:
+    language: Sprache
+    choose: Sprachauswahl
+    login: Login
+    register: Anmeldung
+

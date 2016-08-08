@@ -1,0 +1,17 @@
+{# PAGE D'ACCUEIL WILDER CODER #}
+{% extends 'base.html.twig' %}
+{% block menu %}{% include 'menu/index.html.twig' %}{% endblock %}
+{% block accueil %}
+<div class="row marg-row">
+	<div class="col-lg-3">
+	{{ render(controller("UserBundle:Profile:ShowProfile")) }}
+	</div>
+	<div class="col-lg-6">
+	
+	</div>
+	<div class="col-lg-3">
+		{# {{ include('message/index.html.twig') }} #}
+	</div>
+</div>
+{% endblock %}    
+{% block footer %}{% include 'footer/index.html.twig' %}{% endblock %}

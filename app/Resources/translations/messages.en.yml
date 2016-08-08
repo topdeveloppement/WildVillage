@@ -1,0 +1,11 @@
+base:
+    title: Welcome
+
+navbar:
+    language: Language
+    choose: Choose language
+    register: register
+    login: Login
+    paragraphe: Learn Symfony Hundreds of carefully written documentation pages covering all Symfony features exist and they are FREE and open-source licensed!
+    
+

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block menu %}{% include 'menu/index.html.twig' %}{% endblock %}
+{% block section %}
+<div class="col-lg-6 col-lg-offset-3">
+
+{{form(form)}}
+</div>
+{% endblock %}
+{% block footer %}{% include 'footer/index.html.twig' %}{% endblock %}

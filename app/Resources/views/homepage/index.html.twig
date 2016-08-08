@@ -1,24 +1,4 @@
 {% extends 'base.html.twig' %}
-
-{% block menu %}
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="nav-logo navbar-brand" href="{{ path('homepage') }}">
-					<img src="{{ asset('WildVillageImages/menu/logo_wildcodeschool.png')}}" alt="logo_wildcodeschool">
-				</a>
-			</div>
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href=""><span class="glyphicon glyphicon-user"></span>Inscription</a></li> 
-			<li><a href="{{ path('fos_user_security_login') }}"><span class="glyphicon glyphicon-log-in"></span>Se Connecter</a></li> 
-		</ul>
-		</div>
-	</nav>
-{% endblock %}
-{% block footer %}
-	<footer class="container-footer">
-		<div class="container-fluid">
-			<p class="footer-copyright">Copyright &copy; www.wildcodeschool-chartres.fr - 2016</p>
-		</div>
-	</footer>
-{% endblock %}
+{% block menu %}{% include 'menu/index.html.twig' %}{% endblock %}
+{# {% block modif %}{% include 'modif/index.html.twig' %}{% endblock %} #}
+{% block footer %}{% include 'footer/index.html.twig' %}{% endblock %}

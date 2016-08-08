@@ -10,4 +10,21 @@ namespace UserBundle\Repository;
  */
 class UserRepository extends \Doctrine\ORM\EntityRepository
 {
+	public function getUserIdentity($id)
+	{
+		$user = $this->createQueryBuilder('user');
+
+		$user->select('user.id',
+					  'user.name',
+					  'user.lastname',
+					  'user.username',
+					  'user.email')
+			 ->where('user.id = :id')
+			 ->leftJoin('user.profile', 'profile')
+			 ->addSelect('profile.sexe',
+			 			 'profile.path')
+			 ->setParameter('id', $id)
+		;
+		return $user->getQuery()->getSingleResult();
+	}
 }

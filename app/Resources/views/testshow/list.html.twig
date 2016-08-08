@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block menu %}{% include 'menu/index.html.twig' %}{% endblock %}
+{% block section %}
+<div class="container">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+		    <i class="fa fa-clock-o fa-fw"></i> Responsive info-bull
+		</div>
+		Les auteurs des articles :
+	{% for auteur in auteurs %}
+		<a href="" class="label label-info">{{ auteur.auteur }}</a>
+	{% endfor %}
+	<div class="panel-body">
+	    <ul class="info-bull">
+	    	{% for posts in posts |reverse %}
+	    		{% if loop.index is not divisible by(2) %}
+			        <li>
+			        	<a href="{{ path('oneItem',{id: posts.id}) }}">items</a><br>
+			        	<a href="{{ path('removeItem',{id: posts.id}) }}">remove</a><br>
+			        	<a href="{{ path('modifItem',{id: posts.id}) }}">modif</a><br>
+			            <div class="info-bull-badge">
+			            	<img src="{{ asset('favicon.ico') }}"/>
+			            </div>
+			            <div class="info-bull-panel">
+			                <div class="info-bull-heading">
+			                    <h3 class="info-bull-title">{{ posts.title |capitalize }} {{ loop.index }}</h3>
+			                </div>
+			                <div class="info-bull-body">
+			                    <p>{{ posts.post }}</p>
+			                </div>
+			                <div class="date-info">
+			                	<a href="" class="label label-warning"><i>Article ecrit par : </i>{{ posts.auteur |capitalize}}</a>
+			                	<a href="" class="label label-info pull-right"><i>Publié le </i>{{ posts.dateCreation |date("d  m  Y") }}</a>
+			                </div>
+			            </div>
+			        </li>
+			    {% else %}
+			        <li class="info-bull-inverted">
+			        	<a href="{{ path('oneItem',{id: posts.id}) }}">items</a><br>
+			        	<a href="{{ path('removeItem',{id: posts.id}) }}">remove</a><br>
+			        	<a href="{{ path('modifItem',{id: posts.id}) }}">modif</a><br>
+			            <div class="info-bull-badge warning"><i class="fa fa-credit-card"></i>
+			            </div>
+			            <div class="info-bull-panel">
+			                <div class="info-bull-heading">
+			                    <h3 class="info-bull-title">{{ posts.title |capitalize }} {{ loop.index }}</h3>
+			                </div>
+			                <div class="info-bull-body">
+			                    <p>{{ posts.post }}</p>
+			                </div>
+			                <div class="date-info">
+			                	<a href="" class="label label-warning"><i>Article ecrit par : </i>{{ posts.auteur |capitalize }}</a>
+			                	<a href="" class="label label-info pull-right"><i>Publié le </i>{{ posts.dateCreation |date("d  m  Y") }}</a>
+			                </div>
+			            </div>
+		        	</li>
+		        {% endif %}
+	        {% endfor %}        
+	    </ul>
+	</div>
+	</div>	
+</div>
+{% endblock %}
+{% block footer %}{% include 'footer/index.html.twig' %}{% endblock %}

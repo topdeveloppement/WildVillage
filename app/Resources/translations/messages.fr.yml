@@ -1,0 +1,11 @@
+base:
+    title: Bienvenue
+
+navbar:
+    language: Langue
+    choose: Choix langue
+    login: Se Connecter
+    register: Inscription
+    test: page de test
+    paragraphe: En savoir Symfony Des centaines de pages de documentation soigneusement écrites couvrant toutes les fonctionnalités de Symfony existent et ils sont gratuits et open-source sous licence !
+

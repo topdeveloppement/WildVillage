@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block menu %}{% include 'menu/index.html.twig' %}{% endblock %}
+{% block section %}
+<div class="container">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+		    <i class="fa fa-clock-o fa-fw"></i> Responsive info-bull
+
+		</div>
+	<!-- /.panel-heading -->
+	<div class="panel-body">
+	    <ul class="info-bull">
+	        <li>
+	            <div class="info-bull-badge"><i class="fa fa-check"></i>
+	            </div>
+	            <div class="info-bull-panel">
+	                <div class="info-bull-heading">
+	                    <h4 class="info-bull-title">{{ post.title }}</h4>
+	                    <p><small class="text-muted"><i class="fa fa-clock-o"></i>{{ post.auteur }}</small>
+	                    </p>
+	                </div>
+	                <div class="info-bull-body">
+	                    <p>{{ post.post }}</p>
+	                </div>
+	            </div>
+	        </li>
+	    </ul>
+	</div>
+</div>
+<div>
+</div>	
+</div>
+{% endblock %}
+{% block footer %}{% include 'footer/index.html.twig' %}{% endblock %}

@@ -1,0 +1,22 @@
+<div class="card card-user">
+    <div class="image">
+        <img src="{{ asset('WildVillageImages/profile/photo-zen.jpg')}}" alt="..."/>
+    </div>
+    <div class="content">
+        <div class="author">
+            <a href="#">
+                <img class="avatar border-gray" {% if user.path is not defined or user.path == null %}src="{{ asset('favicon.ico') }}"{% else %}src="{{ asset('Uploads/profiles/')}}{{ user.username ~ '_' ~ user.id ~ '/' ~ user.path }}"{% endif %} alt="photo de profile de {{ user.name ~ " " ~ user.lastname }}"/>
+                <h4 class="title">{{ user.name | capitalize ~ " " ~ user.lastname }}<br />
+                    <small>{{ user.email }}</small>
+                </h4>
+            </a>
+        </div>
+        <p class="description text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam recusandae, facere repudiandae quisquam, neque cupiditate, ipsa possimus earum praesentium saepe, culpa voluptas eum non expedita reiciendis assumenda alias totam voluptates.</p>
+    </div>
+    <hr>
+    <div class="text-center wrap-btn">
+        <button href="#" class=""><img src="{{ asset('WildVillageIcone/profile/facebook.png')}}" alt="icone_facebook"></button>
+        <button href="#" class=""><img src="{{ asset('WildVillageIcone/profile/linkedin.png')}}" alt="icone_linkedin"></button>
+        <button href="#" class=""><img src="{{ asset('WildVillageIcone/profile/github.png')}}" alt="icone_github"></button>
+    </div>  
+</div>

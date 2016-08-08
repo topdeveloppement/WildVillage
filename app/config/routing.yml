@@ -1,12 +1,16 @@
-front_wild_village:
-    resource: "@FrontWildVillageBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
-user:
+app:
     resource: "@UserBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /{_locale}
+    requirements: 
+            _locale: fr|es|de|en
+root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /%locale%
+        permanent: true
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    prefix:   /{_locale}

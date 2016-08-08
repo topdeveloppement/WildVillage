@@ -1,0 +1,50 @@
+{% block section %}
+<div class="panel panel-default bg-panel-mv">
+    <div class="panel-heading text-center title-com">
+         <h3 class="marg-row">Les derniers articles</h3>
+    </div>
+<div class="panel-body">
+    <ul class="info-bull">
+        {% for posts in posts |reverse %}
+            {% if loop.index is odd %}
+                <li>
+                    <div class="info-bull-badge">
+                        <img src="{{ asset('favicon.ico') }}"/>
+                    </div>
+                    <div class="info-bull-panel bg-panel-wh">
+                        <div class="info-bull-heading">
+                            <h3 class="info-bull-title">{{ posts.title |capitalize }}</h3>
+                        </div>
+                        <div class="info-bull-body">
+                            <p>{{ posts.post }}</p>
+                        </div>
+                        <div class="date-info">
+                            <a href="" class="label label-warning"><i>Article ecrit par : </i>{{ posts.auteur |capitalize}}</a>
+                            <a href="" class="label label-info pull-right"><i>Publié le </i>{{ posts.dateCreation |date("d  m  Y") }}</a>
+                            <a href="{{ path('oneItem',{id: posts.id}) }}" class="label label-info pull-right">items</a>
+                        </div>
+                    </div>
+                </li>
+            {% else %}
+                <li class="info-bull-inverted">
+                    <div class="info-bull-badge warning"><i class="fa fa-credit-card"></i>
+                    </div>
+                    <div class="info-bull-panel bg-panel-wh">
+                        <div class="info-bull-heading">
+                            <h3 class="info-bull-title">{{ posts.title |capitalize }}</h3>
+                        </div>
+                        <div class="info-bull-body">
+                            <p>{{ posts.post }}</p>
+                        </div>
+                        <div class="date-info">
+                            <a href="" class="label label-warning"><i>Article ecrit par : </i>{{ posts.auteur |capitalize }}</a>
+                            <a href="" class="label label-info pull-right"><i>Publié le </i>{{ posts.dateCreation |date("d  m  Y") }}</a>
+                        </div>
+                    </div>
+                </li>
+            {% endif %}
+        {% endfor %}        
+    </ul>
+</div>
+</div>  
+{% endblock %}

@@ -3,17 +3,17 @@
 \*=============================*/
 footer.container-footer {
 	position: absolute;
+	top: 100%;
 	width:100%;
-	bottom: 0;
-	background-color: #ECF0F1;
-	border-top: solid #00B5B5 4px;
+	background-color: #F0F0F0;
+	border-top: solid #3B3C3D 4px;
 }
-footer.container-footer div.container-fluid {
+footer.container-footer div.footer {
 	text-align: center;
 	padding-top: 14px;
 	padding-bottom: 10px;
 }
-footer.container-footer div.container-fluid .footer-copyright {
+footer.container-footer div.footer .footer-copyright {
 	font-weight: bold;
 	letter-spacing: 0.1em;
 }

@@ -1,0 +1,8 @@
+base:
+    title: Bienvenido
+
+navbar:
+    language: idioma
+    choose: la elección del idioma
+    login: Conectarse
+    register: registro

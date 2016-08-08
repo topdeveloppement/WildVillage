@@ -1,0 +1,55 @@
+/*=============================*\
+		   CHECKMAIL
+\*=============================*/
+.check-mail {
+	padding-top: 100px;
+	width: 1280px;
+	margin: 0 auto !important;
+}
+.check-mail div.jumbotron {
+	padding: 0 ;
+	width: 100%;
+	background-color: #FFFFFF;
+	margin: 0 auto !important;
+	padding: 0 ;
+	border: solid 1px #3B3C3D;
+	border-radius: 0px;
+}
+.check-mail > div > div.row {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.img-lapin {
+	display: inline-block;
+	width: 280px;
+	margin: 30px 10px;
+	background-color: transparent;
+}
+.check-mail-title > h2{
+	padding-top: 40px;
+	padding-left: 50px;
+	color: #3B3C3D;
+}
+.check-mail-title > p{
+	text-indent: 30px;
+	padding-top: 40px;
+	padding-right: 10px;
+	color:#3B3C3D;
+}
+.check-mail hr {
+	margin: 0 auto;
+	width: 80%;
+	border: solid 1px #3B3C3D;
+}
+.wrap-check-btn {
+	width: 200px;
+	margin: 0 auto !important;
+}
+.btn-check {
+	margin: 40px 0;
+	background-color: #3B3C3D;
+	color: #F0F0F0;
+}
+.btn-check:hover {
+	color: #F0F0F0;
+}

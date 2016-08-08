@@ -4,17 +4,42 @@
         <meta charset="UTF-8" />
         <title>{% block title %}WildVillage{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" type="text/css" href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}">
-            <link rel="stylesheet" type="text/css" href="{{ asset('WildVillageCss/menu/menu.css') }}">
-            <link rel="stylesheet" type="text/css" href="{{ asset('WildVillageCss/footer/footer.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/vendors/bootstrap/dist/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/BootstrapFormHelper/css/bootstrap-formhelpers.min.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/WildVillageCss/global/style.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/WildVillageCss/menu/menu.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/WildVillageCss/login/login.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/WildVillageCss/message/message.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/WildVillageCss/commentaire/commentaire.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/WildVillageCss/profile/profile.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/WildVillageCss/registration/registration.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/WildVillageCss/checkmail/checkmail.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('/WildVillageCss/footer/footer.css') }}">
         {% endblock %}
         {% block javascripts %}
-            <script type="text/javascript" src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('/vendors/jquery/dist/jquery.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('/BootstrapFormHelper/js/bootstrap-formhelpers.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('/WildVillageJs/registration/controlPseudo.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('/WildVillageJs/globaljs/global.js') }}"></script>
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block menu %}{% endblock %}
-        {% block footer %}{% endblock %}
+        <div class="container-fluid wrapper">
+            {% block menu %}{% endblock %}
+            {% for message in app.session.flashbag.get('infos') %}
+                <div class="alert alert-success" role="alert">
+                {{ message }}
+                </div>
+            {% endfor %}    
+            {% block body %}{% endblock %}
+            {% block modif %}{% endblock %}
+            {% block dashboard %}{% endblock %}
+            {% block fos_user_content %}{% endblock %}   
+            {% block accueil %}{% endblock %}
+            {% block section %}{% endblock %}    
+            {% block footer %}{% endblock %}
+        </div>
     </body>
 </html>

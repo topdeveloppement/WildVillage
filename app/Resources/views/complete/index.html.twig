@@ -1,0 +1,50 @@
+{{ form_start(form, {'method': 'post', 'action': path('dashboard')}) }}
+<div class="panel panel-default">
+    <div class="panel-heading text-center">
+        <i class="fa fa-bell fa-fw"></i> Mettre à jours votre profile
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="list-group">
+        	{{ form_label(form.file)}}
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+    			{{ form_widget(form.file, { 'attr': {'class': 'form-control'}}) }}
+			</div>
+            {{ form_label(form.sexe)}}
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    		{{ form_widget(form.sexe, { 'attr': {'class': 'form-control border', 'placeholder': 'Votre sexe'}}) }}
+			</div>
+			{{ form_label(form.telephone)}}
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+    			{{ form_widget(form.telephone, { 'attr': {'class': 'form-control', 'placeholder': 'Téléphone'}}) }}
+			</div>
+			{{ form_label(form.voie)}}
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
+    			{{ form_widget(form.voie, { 'attr': {'class': 'form-control', 'placeholder': 'Voie'}}) }}
+			</div>
+			{{ form_label(form.rue)}}
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+    			{{ form_widget(form.rue, { 'attr': {'class': 'form-control email', 'placeholder': 'Rue'}}) }}
+			</div>
+			{{ form_label(form.codepostal)}}
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-screenshot"></i></span>
+    			{{ form_widget(form.codepostal, { 'attr': {'class': 'form-control', 'placeholder': ' Code postal'}}) }}
+			</div>
+			{{ form_label(form.ville)}}
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+    			{{ form_widget(form.ville, { 'attr': {'class': 'form-control', 'placeholder': 'Ville'}}) }}
+			</div>
+        </div>
+        <!-- /.list-group -->
+        <input class="btn btn-default btn-block" type="submit" value="Envoyer" />
+    </div>
+</div>
+    <!-- /.panel-body -->
+{{ form_end(form) }}

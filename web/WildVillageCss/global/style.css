@@ -1,0 +1,26 @@
+/*=============================*\
+		   STYLE GLOBAL
+\*=============================*/
+html {
+	min-height: 100vh;
+}
+body {
+	min-height: 100vh;
+	background-color: #FEFCFF;
+}
+.wrapper {
+	position: relative;
+	min-height: 100vh;
+	padding: 0 !important;
+}
+.wrapper > nav + div {
+	padding: 30px 0 ;
+}
+/* Class qui supprime les marges negative de bootsrap */
+.marg-row {
+	margin: 0 !important;
+}
+/* Class qui supprime les paddings de bootsrap */
+.padd-row {
+	padding: 0 !important;
+}

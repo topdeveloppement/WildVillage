@@ -1,14 +1,19 @@
 # Learn more about services, parameters and containers at
 # http://symfony.com/doc/current/book/service_container.html
+
+# Parametre de services
 parameters:
-#    parameter_name: value
+    RegistrationType: UserBundle\Form\RegistrationType
+    upload_image: UserBundle\Services\UploadImage
+    upload_directory: '%kernel.root_dir%/../web/Uploads/profiles/'
 
+# Declaration de services
 services:
-#    front_wild_village.example:
-#        class: FrontWildVillageBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
-
-services:
-#    user.example:
-#        class: UserBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+    user.form.registartion:
+        class: "%RegistrationType%"
+        tags:
+            -  { name: form.type, alias: app_user_registration }
+    # Service d'upload d'images
+    app.images_uploader:
+        class: "%upload_image%" 
+        arguments: ["%upload_directory%","@security.token_storage"]
